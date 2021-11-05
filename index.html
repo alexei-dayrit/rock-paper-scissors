@@ -5,43 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <script>
-        
-        let computerSelection;
-        let playerSelection;
-        let playerScore = 0;
+    <div class="choices">
+        <button class = "choice" data-choice = 'rock'>ROCK</button>
+        <button class = "choice" data-choice = 'paper'>PAPER</button>
+        <button class = "choice" data-choice = "scissors">SCISSORS</button>
+    </div>
+
+    <div class="results">
+        <div class="result-score">
+            Your Score: 0
+        </div> 
+        <div class="result-score">
+            Computer Score: 0
+        </div>
+    </div>
+         
+        <!-- let playerScore = 0;
         let computerScore = 0;
+        let roundWinner = '';
        
-       function computerPlay() {
-            let choices = ['ROCK', 'PAPER', 'SCISSORS']
-            return choices[Math.floor(Math.random() * choices.length)]
-        }
+        UI section
+        
 
-        function playRound(playerSelection, computerSelection) {
-            playerSelection = prompt("ROCK, PAPER, or SCISSORS?").toUpperCase();
-            computerSelection = computerPlay();
-            let response = "";
+        End of UI section
 
-            if ( (playerSelection === "ROCK" && computerSelection === "SCISSORS") ||
-                        (playerSelection === "PAPER" && computerSelection === "ROCK") ||
-                        (playerSelection === "SCISSORS" && computerSelection === "PAPER") ) {
-                            playerScore++;
-                            response = "You won this round!";
-            } 
-            if ( (playerSelection === "ROCK" && computerSelection === "PAPER") ||
-                        (playerSelection === "PAPER" && computerSelection === "SCISSORS") ||
-                        (playerSelection === "SCISSORS" && computerSelection === "ROCK") ) {
-                            computerScore++;
-                            response = "You lost this round!";
-            } 
-            if (playerSelection === computerSelection) {
-                response = "WOW! You chose the same thing.";
-            } return response + " Your score is " + playerScore + ". The computer's score is " + computerScore + ".";
-        }
 
+
+
+       
+
+
+
+
+        PLAYS 5 GAMES FROM ORIGINAL INSTRUCTIONS
         function game() {
             console.log(playRound(playerSelection, computerSelection));
             console.log(playRound(playerSelection, computerSelection));
@@ -50,19 +50,18 @@
             console.log(playRound(playerSelection, computerSelection));
             if (playerScore > computerScore) {
                 return "YOU'RE THE WINNER!!!" + "\n Final scores: \n You won  " + playerScore + 
-                " times. The computer won " + computerScore + " times.";
+                        " times. The computer won " + computerScore + " times.";
             } else if (playerScore < computerScore) {
-                return "You lost. The computer beat you!" + "\n Final scores: \n You won  " + playerScore + 
-                " times. The computer won " + computerScore + " times.";
+                return "You lost. The computer beat you!" + "\n Final scores: \n You won  " + 
+                        playerScore + " times. The computer won " + computerScore + " times.";
             } else {
-                return "It's a tie. Play again for a chance to win!" + "\n Final scores: \n You won  " + playerScore + 
-                " times. The computer won " + computerScore + " times.";
+                return "It's a tie. Play again for a chance to win!" + "\n Final scores: \n
+                        You won  " + playerScore + " times. The computer won " + computerScore + " times.";
             } 
         }
 
         console.log(game( ));
+ -->
 
-    </script>
-    
 </body>
 </html>
